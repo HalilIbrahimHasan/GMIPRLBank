@@ -1,0 +1,152 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "create a connection with DB",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15824159500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user creates a connection with db using \"jdbc:postgresql://157.230.48.97:5432/gmibank_db\" , \"techprodb_user\" and \"Techpro_@126\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"jdbc:postgresql://157.230.48.97:5432/gmibank_db\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"techprodb_user\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"Techpro_@126\"",
+                  "offset": 113
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_creates_a_connection_with_db_using_and(String,String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1864100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 47600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
+        "line": 45,
+        "name": "test all ssn ids provided from UI",
+        "description": "",
+        "id": "all-data-validation-based-on-db;test-all-ssn-ids-provided-from-ui;all-the-data;2",
+        "after": [
+          {
+            "result": {
+              "duration": 60700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3706216500,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "user reads and gets all ssn \"ssn\" and \"Select * from tp_customer\" using db",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ssn\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Select * from tp_customer\"",
+                  "offset": 38
+                }
+              ],
+              "location": "DatabaseStep.user_reads_and_gets_all_ssn_and_using_db(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3363200,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "user saves the ssn ids to correspondent files",
+            "match": {
+              "location": "DatabaseStep.user_saves_the_ssn_ids_to_correspondent_files()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 59292300,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "user validates them",
+            "match": {
+              "location": "DatabaseStep.user_validates_them()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@database"
+          },
+          {
+            "name": "@datatest001"
+          }
+        ]
+      }
+    ],
+    "name": "all data validation based on DB",
+    "description": "",
+    "id": "all-data-validation-based-on-db",
+    "keyword": "Feature",
+    "uri": "src\\test\\resources\\features\\Database.feature",
+    "tags": [
+      {
+        "name": "@database",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

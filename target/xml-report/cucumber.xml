@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="19.605555">
+<testcase classname="all data validation based on DB" name="test all ssn ids provided from UI" time="19.605555">
+<system-out><![CDATA[Given user creates a connection with db using "jdbc:postgresql://157.230.48.97:5432/gmibank_db" , "techprodb_user" and "Techpro_@126".passed
+Given user reads and gets all ssn "ssn" and "Select * from tp_customer" using db.passed
+And user saves the ssn ids to correspondent files...........................passed
+Then user validates them....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
